@@ -1,0 +1,124 @@
+.header {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+
+    &-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .branding {
+        img {
+            height: 4rem;
+        }
+    }
+
+    &-nav {
+        background-color: $clr-light;
+        position: absolute;
+        top: 0rem;
+        left: 100vh;
+        width: 100%;
+        display: block;
+        transition: .5s ease;
+        overflow: hidden;
+
+        ul {
+            padding-top: 15rem;
+            text-align: center;
+            left: 0;
+            display: block;
+            height: 100vh;
+            gap: 2rem;
+
+            li {
+                padding: 1.5rem 0;
+                margin-left: 3rem;
+                font-weight: 600;
+
+                &:hover {
+                    cursor: pointer;
+
+                    a {
+                        color: $clr-blue;
+                    }
+                }
+
+                a {
+                    color: $clr-dark;
+                }
+
+                &:last-child {
+                    background-color: $clr-blue;
+                    width: 40rem;
+                    display: inline-block;
+                    padding: 1rem 1.5rem;
+                    border-radius: 5rem;
+                    font-weight: 700;
+                    color: $clr-light;
+                    
+                }
+
+
+            }
+        }
+
+        &.open {
+            left: 0;
+            height: 100vh;
+            z-index: 5;
+            transition: .5s ease;
+
+        }
+    }
+
+    .toggle-menu {
+        z-index: 5;
+        display: block;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        span {
+            width: 3rem;
+            height: .3rem;
+            background-color: $clr-light;
+            display: block;
+            border-radius: 5rem;
+            transition: 0.5s ease;
+
+            &:nth-child(2) {
+                margin: .5rem 0;
+            }
+        }
+
+        &.open {
+            span {
+                background-color: $clr-dark;
+                &:first-child {
+                    transform: translate(0, 10px) rotate(225deg);
+                    transition: .5s ease;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+                &:last-child {
+                    transform: translate(0, -7px) rotate(-225deg);
+                    transition: .5s ease;
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-lg){
+        .header{
+            &-nav{
+                
+            }
+        }
+    }
+}
+

@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: "Poppins";
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+}
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.header .branding img {
+  height: 4rem;
+}
+.header-nav {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 0rem;
+  left: 100vh;
+  width: 100%;
+  display: block;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+.header-nav ul {
+  padding-top: 15rem;
+  text-align: center;
+  left: 0;
+  display: block;
+  height: 100vh;
+  gap: 2rem;
+}
+.header-nav ul li {
+  padding: 1.5rem 0;
+  margin-left: 3rem;
+  font-weight: 600;
+}
+.header-nav ul li:hover {
+  cursor: pointer;
+}
+.header-nav ul li:hover a {
+  color: hsl(213, 76%, 31%);
+}
+.header-nav ul li a {
+  color: hsl(0, 0%, 18%);
+}
+.header-nav ul li:last-child {
+  background-color: hsl(213, 76%, 31%);
+  width: 40rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.header-nav.open {
+  left: 0;
+  height: 100vh;
+  z-index: 5;
+  transition: 0.5s ease;
+}
+.header .toggle-menu {
+  z-index: 5;
+  display: block;
+}
+.header .toggle-menu:hover {
+  cursor: pointer;
+}
+.header .toggle-menu span {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: hsl(0, 0%, 100%);
+  display: block;
+  border-radius: 5rem;
+  transition: 0.5s ease;
+}
+.header .toggle-menu span:nth-child(2) {
+  margin: 0.5rem 0;
+}
+.header .toggle-menu.open span {
+  background-color: hsl(0, 0%, 18%);
+}
+.header .toggle-menu.open span:first-child {
+  transform: translate(0, 10px) rotate(225deg);
+  transition: 0.5s ease;
+}
+.header .toggle-menu.open span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header .toggle-menu.open span:last-child {
+  transform: translate(0, -7px) rotate(-225deg);
+  transition: 0.5s ease;
+}
+.banner {
+  padding: 5rem 0;
+  background-image: url("../img/banner_home_v1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */
