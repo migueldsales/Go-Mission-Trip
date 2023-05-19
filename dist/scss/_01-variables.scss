@@ -1,7 +1,6 @@
 // Color Palette Per Project
 
-
-$clr-dark: hsl(0, 0, 18%);
+$clr-dark:hsl(0, 0, 18%);
 $clr-light: hsl(0, 0%, 100%);
 $clr-cyan: hsl(176, 80%, 40%);
 $clr-green: hsl(179, 43%, 66%);
@@ -16,3 +15,49 @@ $break-sm: 500px;
 $break-md: 768px;
 $break-lg: 1080px;
 $break-xl: 1920px;
+
+.btn.blue{
+        background:$clr-blue;
+        width: fit-content;
+        padding: 1rem;
+        border-radius: 5rem;
+        color: $clr-light;
+        a{
+            color: $clr-light;
+            font-style: 700;
+        }
+}
+.btn.blue-white{
+        background:$clr-blue;
+        width: fit-content;
+        padding: 1rem;
+        border-radius: 5rem;
+        border: 2px solid white;
+        li{ 
+            a{
+                color: $clr-light;
+                font-weight: 700;
+            }
+        }
+        
+}
+
+
+// .btn.d-white{
+//     display: flex;
+//     width: 100%;
+//     background:$clr-light;
+//     width: fit-content;
+//     padding: 1rem;
+//     border-radius: 5rem;
+//     color: $clr-blue;
+//     font-weight: 700;
+//     &:hover{
+//         background-color: $clr-blue;
+//         border: 2px solid white;
+//         color: $clr-light;
+//     }
+
+// }
+
+// ================================================================================================

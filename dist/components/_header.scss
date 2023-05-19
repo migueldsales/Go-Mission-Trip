@@ -2,6 +2,7 @@
     position: absolute;
     width: 100%;
     background: transparent;
+    z-index: 999;
 
     &-wrapper {
         align-items: center;
@@ -14,7 +15,7 @@
             height: 4rem;
         }
     }
-
+    
     &-nav {
         background-color: $clr-light;
         position: absolute;
@@ -58,26 +59,25 @@
                     border-radius: 5rem;
                     font-weight: 700;
                     color: $clr-light;
-                    
                 }
-
-
             }
+            
         }
-
         &.open {
             left: 0;
             height: 100vh;
             z-index: 5;
             transition: .5s ease;
-
         }
+    }
+    &-nav-desktop{
+        display: none;
     }
 
     .toggle-menu {
         z-index: 5;
         display: block;
-
+        
         &:hover {
             cursor: pointer;
         }
@@ -114,11 +114,35 @@
         }
     }
     @include mediaQuery($break-lg){
-        .header{
-            &-nav{
-                
+        &-wrapper{
+            .branding{
+                img{
+                    height: 6rem;
+                    width: 25rem;
+                }
             }
         }
+        &-nav{
+            display: none;
+        }
+        &-nav-desktop{
+            display: block;
+            ul{
+                align-items: center;
+                display: flex;
+                gap: 3rem;
+                li{
+                    a{
+                        color: $clr-light;
+                        font-weight: 700;
+                    }
+            }
+            
+        }
     }
+        .toggle-menu{
+            display: none;
+        }
+    
 }
-
+}

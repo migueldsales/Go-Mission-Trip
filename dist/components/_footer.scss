@@ -1,0 +1,80 @@
+.footer{
+    padding: 5rem 0;
+    &-nav{
+        ul{
+            display: grid;
+            gap: 2rem;
+            li{
+                font-size: 1.3rem;
+                text-align: center;
+                a{
+                    color: $clr-light;
+                }
+                &:last-child{
+                    margin: 0 auto;
+                    justify-content: center;
+                    background:$clr-light;
+                    width: fit-content;
+                    padding: 1rem 1rem;
+                    border-radius: 5rem;
+                    border: 1px solid $clr-blue;
+                    &:hover{
+                        background-color: $clr-blue;
+                        border: 1px solid white;
+                        a{
+                            color: $clr-light;
+                        }
+                    }
+                    a{
+                        color: $clr-blue;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        
+    }
+    p{
+        margin: 2rem 0;
+        text-align: center;
+        font-size: 1.3rem;
+        color: $clr-light;
+    }
+    &-soc-med{
+        ul{
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            li{
+                a{
+                    color: $clr-light;
+                    font-size: 3rem;
+                }
+                i{
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+        &-nav{
+            display: flex;
+            justify-content: center;
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        &-soc-med{
+            ul{
+                gap: 3rem;
+            }
+        }
+    }
+}

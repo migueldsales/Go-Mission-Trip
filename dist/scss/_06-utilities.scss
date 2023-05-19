@@ -1,0 +1,52 @@
+$colors:(
+    "dark" : $clr-dark,
+    "light" : $clr-light,
+    "blue" : $clr-blue,
+    "d-blue" : $clr-d-blue,
+    "l-blue" : $clr-l-blue,
+    "gray" : $clr-gray,
+);
+
+$displays: flex, grid, column, row, none, block, inline, inline flex, inline block;
+@each $display in $displays{
+    .d{
+        &--#{$display}{
+            display: $display;
+        }
+    }
+}
+$alignments:(
+    "center": center,
+    "between": space-between,
+);
+@each $key, $val in $alignments{
+    .text{
+        &--#{$key}{
+            text-align: $val;
+            // align-items: $val;
+            // justify-content: $val;
+        }
+    }
+}
+
+@each $key,$val in $colors{
+    .text{
+        &--#{$key}{
+            color: $val;
+        }
+    }
+    .bg{
+        &--#{$key}{
+            background-color: $val;
+        }
+    }
+}
+
+@for $i from 0 through 20{
+    .mr--#{$i}{
+        margin-right: $i + rem;
+    }
+    .mx--#{$i}{
+        margin: 0 $i + rem;
+    }
+}
